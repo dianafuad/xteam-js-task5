@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s ease-out ;
+}
+
+/* glopal rules>>>>>>>>>>>>>>>> */
+:root {
+    --main-color: #f05a5b;
+    --main-color-alt: #EF233C;
+    --dark-color: #2B2D42;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #1e1e1e;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+li {
+
+    font-size: 14px;
+}
+/* dark mode classes */
+
+
+
+.dark-back-g{
+
+    background-color: var(--dark-color);
+    color: #eee;
+  
+}
+.light-text{
+ color:#eeeeee !important;
+}
+.dark-text{
+    color: var(--dark-color) !important;
+}
+.mediam-dark-bg{
+    background-color: #686868!important;
+    color: #eeeeee !important;
+}
+.mediam-dark-bg:hover{
+    color: var(--main-color-alt) !important;
+}
+.colored-backg{
+    background-color:#c05a5a !important;
+}
+/* start nav bar>>>>>>>>>>>>>>>>>>>> */
+.navbar {
+    background-color: var(--dark-color) !important;
+}
+
+.logo {
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-family: 'Mea Culpa', cursive;
+}
+
+.logo span {
+    color: var(--main-color);
+
+    font-size: 40px;
+}
+
+.active a {
+    color: var(--main-color) !important;
+}
+
+.fa-search,
+.fa-shopping-cart {
+    color: #ffffff80;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+.fa-shopping-cart:hover{
+    color: var(--main-color);
+}
+.search {
+    padding: 0 10px;
+}
+
+nav button{
+    border: none;
+    background-color: transparent;
+}
+#items-added{
+    font-size: 13px;
+    color: var(--main-color-alt);
+    font-weight: bold;
+    f
+}
+
+/* toggol button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left:2px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--main-color);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;}
+/* end nav bar>>>>>>>>>>>>>>>>>>>>>> */
+
+/* start product-details page****************************************************8*** */
+
+
+.products-container {
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.product {
+    transition: .5s;
+    width: fit-content;
+
+    margin-bottom:50px ;
+    /* height: fit-content; */
+    padding: 10px 5px;
+    border-radius: 5px;
+
+    
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px 0 var(--dark-color);
+}
+
+.product .price,
+.product h4,
+.product .prod-descrip {
+    width: 280px;
+    margin: auto;
+    padding: 5px;
+
+}
+
+.product .image {
+    max-width: 280px;
+    width: 280px;
+    height: 350px;
+}
+
+.product .image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.price {
+    color: #77000e;
+    font-weight: bold;
+    transition: .5s;
+  
+}
+
+.btn {
+    background-color: #2B2D42;
+    color: #ffffff80;
+    max-width: 280px;
+    margin: auto;
+    width: 100%;
+    transition: .5s;
+    margin: 10px 0;
+
+}
+
+.btn:hover {
+    color: var(--main-color);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.btn:focus {
+    box-shadow: none !important;
+}
+
+.prod-descrip {
+    line-height: 20px;
+    font-size: 14px;
+    transition: .5s;
+    display: inline-block;
+}
+
+/* end products */
+
+/* start product-details page*********************************************** */
+
+.big-image img {
+    width: 100%;
+}
+
+.small-images {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.sm-image {
+    flex-basis: 33%;
+    cursor: pointer;
+
+}
+
+.sm-image img {
+    width: 100%;
+}
+
+#see-more {
+    font-size: 14px;
+}
+
+#see-more-btn {
+
+    padding: 5px 10px;
+    border: none;
+    background: transparent;
+    color: red;
+    text-decoration: underline;
+}
+
+.product-details .sizes {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sizes li {
+    margin: 10px;
+    background-color: var(--dark-color);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.product-details .btn {
+
+    background-color: var(--main-color);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+.plus-mines{
+    background-color: #f05a5b;
+    color: #1e1e1e;
+    padding: 5px 10px;
+    border: none;
+}
+@media screen and (min-width:992px) {
+    .big-image {
+        height: 70vh;
+    }
+
+    .big-image img {
+        height: 70vh;
+        object-fit: contain;
+    }
+
+    .small-images {
+        justify-content: center;
+    }
+
+    .sm-image {
+        flex-basis: 20%;
+    }
+
+    .sm-image img {
+        width: 100px;
+    }
+
+}
+
+/* end product-details page  */
